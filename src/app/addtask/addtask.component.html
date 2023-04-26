@@ -1,0 +1,19 @@
+<div class="main">
+  <div class="w-50 container mt-5">
+    <form (ngSubmit)="add()">
+      <div class="form-floating mb-3  ">
+  
+        <input [(ngModel)]="titleadd" type="text" class="form-control" name="titleadd" id="floatingInput"
+          placeholder="name@example.com">
+        <label for="floatingInput">Title</label>
+      </div>
+      <div class="form-floating">
+        <textarea [(ngModel)]="contentadd" class="form-control" name="contentadd" placeholder="Leave a comment here"
+          id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Contents</label>
+      </div>
+      <div class="text-center mt-4"> <button type="submit" class="btn btn-outline-primary">Add task</button>
+      </div>
+    </form>
+  </div>
+</div>

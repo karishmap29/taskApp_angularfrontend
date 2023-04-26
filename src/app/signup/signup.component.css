@@ -1,0 +1,14 @@
+.signup{
+    text-align: center;
+    width: 30%;
+    /* border: 2px white solid;
+    margin: 15px; */
+}
+.main{
+    background-color: #dde1e7;
+}
+.container{
+    border: 2px white solid;
+    padding: 15px;
+    border-radius: 20px;
+}

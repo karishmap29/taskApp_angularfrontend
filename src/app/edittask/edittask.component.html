@@ -1,0 +1,23 @@
+<div class="main">
+    <div class="w-50 container mt-5">
+        <form action="" (ngSubmit)="updateTask(updateTaskForm)" #updateTaskForm="ngForm">
+            <div class="form-floating mb-3  ">
+
+                <input [(ngModel)]="toupdate.title" type="text" name=" t1" class="form-control ps-5" id="floatingInput"
+                    placeholder="name@example.com">
+                <label for="floatingInput">Title</label>
+            </div>
+            <div class="form-floating">
+                <textarea [(ngModel)]="toupdate.content" class="form-control ps-5 " name="c1"
+                    placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px"></textarea>
+                <label for="floatingTextarea2">Contents</label>
+            </div>
+            <div class="text-center mt-4"> <button class="btn btn-outline-primary">Update task</button>
+            </div>
+        </form>
+
+
+
+
+    </div>
+</div>

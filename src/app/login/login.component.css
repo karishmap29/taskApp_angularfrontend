@@ -1,0 +1,24 @@
+/* 
+*{  height: 100rem; */
+/* .login{
+    background-image: url("https://i.postimg.cc/HWQMfSVh/todo-list-seamless-pattern-universal-background-66678083.jpg");
+    background-size:auto;
+    background-repeat:no-repeat;
+} */
+.login{
+    text-align: center;
+    width: 30%;
+    background-color: #dde1e7;
+    border: 1px white solid;
+    border-radius: 20px;
+    padding: 15px;
+}
+.main{
+    background-color: #dde1e7;
+ 
+}
+a{
+    text-decoration: none;
+    margin: 30px;
+    
+}

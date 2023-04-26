@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg " >
+    <div class="container-fluid">
+        <a class="navbar-brand ms-3" (click)="show()">MyTasks</a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item ms-2">
+                    <a class="nav-link  " href="/addtask">Add</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " (click)="logout()">Logout</a>
+                </li>
+            </ul>
+            <button (click)="toggledarkTheme()" class="btn btn-outline-light rounded-pill me-3"><i class="fa-regular fa-moon"></i></button>
+
+            <form class="d-flex" role="search">
+                <input [(ngModel)]="searchTerm"  class="form-control " name="key "type="search" style="background-color:#f0f2f4 ;" placeholder="Search" aria-label="Search">
+                <button class="btn  me-2" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="main">
+    <h3 class="text-center pt-2">Welcome {{user}}</h3>
+    <!-- <div [ngClass]="flag?'style':'' ">
+        <img   src="https://i.postimg.cc/nhrHhNqW/paper-notes.png" alt="">
+
+    </div> -->
+    <div class="row">
+        <div class="col-lg-4 col-md-6 "  *ngFor="let ind=index,let i of taskdataresult | filter:searchTerm ">
+            <div class="container">
+                <div class="neumorphism position-relative">
+                    <p class="p-2 text-center text-wrap fw-light">Title: <span class="fw-semibold"> {{i.title}}</span><span
+                            class="position-absolute end-0"><a style="height: 40px;width:30px; color: rgb(81, 76, 76)"
+                                href="/edittask/{{ind}}" class="fa-regular fa-pen-to-square"></a> <a
+                                style="height: 40px;width:30px; color: rgb(81, 76, 76); " href="/deletetask/{{ind}}"
+                                class="fa-sharp fa-solid fa-trash "></a></span> </p>
+                </div>
+                <div class="neumorphism-1">
+                    <p class="ps-3 pt-2">{{i.content}}</p>
+                    <!-- <a class="btn btn-outline-dark  btn-sm " href="/edittask/{{ind}}">Edit</a>
+            <a href="#" class="btn btn-outline-danger btn-sm  " href="/deletetask/{{ind}}">Delete</a> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- style="background: #dde1e7;" -->
+
+
+<!-- <section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class=" ">
+                <div class="card shadow"style="max-width: 45%;" *ngFor="let i of taskdataresult;let ind=index">
+                    <div class="card-body col-lg-3">
+                        <p class="h3">
+                            {{i.title}}
+                        </p>
+                        <p>{{i.content}}</p>
+                        <a class="btn btn-outline-dark me-3 btn-sm " href="/edittask/{{ind}}">Edit</a>
+                        <a href="#" class="btn btn-outline-danger btn-sm " href="/deletetask/{{ind}}">Delete</a>
+                         <button href="#" class="btn btn-outline-danger btn-sm " (click)="delete(ind)">Delete</button> -->
+<!-- </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> --> 

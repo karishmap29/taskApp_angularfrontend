@@ -1,0 +1,25 @@
+<div class="main">
+  <div class="login container text-center mt-5">
+    <div>
+        <h1>Login</h1>
+        <form action="" [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="mb-3 mt-5">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button><br>
+           <p class="mt-4"> Not yet registered? <a style="text-decoration: none;" routerLink="signup">Sign up here</a></p>
+          </form>
+    </div>
+
+</div>
+
+</div>
